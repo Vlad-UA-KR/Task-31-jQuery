@@ -1,0 +1,185 @@
+@import "_icons";
+@import "_normalize";
+@import "_nullstyle";
+
+body {
+	min-height: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	color: rgb(183, 186, 205);
+	font-size: 14px;
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+	background: url(../../img/BG.png) no-repeat;
+	background-size: cover;
+}
+.container {
+	max-width: 600px;
+	min-height: 540px;
+	margin: 0 auto;
+	padding-top: 200px;
+	position: relative;
+
+	&__content {
+		height: 425px;
+		background-color: rgb(38, 40, 54);
+		box-shadow: 0px 23px 57px 0px rgba(0, 0, 0, 0.4);
+	}
+}
+
+// --------------------TABS----------------------
+
+.tabs {
+	background-color: rgb(48, 50, 66);
+	height: 115px;
+
+	&__wrapper {
+		max-width: 520px;
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+	}
+
+	&__tab {
+		width: 150px;
+		height: 113px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 16px;
+		color: rgba(183, 186, 205, 0.702);
+		row-gap: 12px;
+		box-sizing: content-box;
+		cursor: pointer;
+		transition: all 0.2s ease-in;
+	}
+
+	&__tab:hover {
+		color: rgb(251, 251, 251);
+		border-bottom: 2px solid rgb(251, 251, 251);
+	}
+}
+
+// --------------------CONTENT----------------------
+
+.content {
+	position: relative;
+	&__wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		max-width: 520px;
+		margin: 0 auto;
+		padding-top: 55px;
+		padding-left: 40px;
+		display: flex;
+	}
+}
+.left {
+	width: 160px;
+	min-height: 100%;
+
+	&__image {
+		display: block;
+		width: 160px;
+		height: 230px;
+	}
+
+	&__stars {
+		width: 100px;
+		height: 20px;
+		background-color: yellow;
+		margin: 25px auto;
+	}
+}
+.right {
+	width: 520px - 160px;
+	min-height: 100%;
+	padding-left: 40px;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		font-size: 32px;
+		color: rgb(255, 255, 255);
+	}
+
+	&__subtitile {
+		font-size: 14px;
+		color: rgb(253, 253, 253);
+		display: block;
+		padding-top: 10px;
+	}
+
+	&__raiting {
+		display: inline-block;
+		font-size: 40px;
+		color: rgb(170, 173, 187);
+	}
+
+	&__text {
+		padding-top: 35px;
+		text-align: left;
+		width: 306px;
+		line-height: 1.571;
+	}
+
+	&__footer {
+		padding-top: 60px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__price {
+		font-size: 32px;
+		color: rgb(255, 255, 255);
+		line-height: 0.625;
+	}
+
+	&__discount {
+		display: block;
+		font-size: 12px;
+		color: rgb(254, 220, 63);
+		font-weight: bold;
+		line-height: 1.667;
+		padding-bottom: 8px;
+		padding-left: 4px;
+	}
+
+	&__button {
+		border-radius: 2px;
+		background-color: #13e28d;
+		width: 164px;
+		height: 55px;
+		font-size: 16px;
+		color: rgb(255, 255, 255);
+		font-weight: bold;
+		line-height: 1.25;
+	}
+
+	&__button:hover {
+		background-color: darken($color: #13e28d, $amount: 10);
+		color: darken($color: rgb(255, 255, 255), $amount: 10);
+	}
+}
+.wrapperOne {
+	z-index: 1;
+}
+.wrapperTwo {
+	z-index: -1;
+}
+.wrapperThree {
+	z-index: -1;
+}
